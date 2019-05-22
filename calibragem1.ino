@@ -25,12 +25,12 @@ void loop() {
 
 void calibrar_balanca(HX711 balanca,float calibracao_fator){
   balanca.set_scale(fator_de_calibracao);
-  aux = balanca.get_unit();
+  aux = balanca.get_units();
   if(aux > peso){
     do{
       calibracao_fator++;
       balanca.set_scale(calibracao_fator);
-      aux = balanca.get_unit();
+      aux = balanca.get_units();
       
       }while(aux>peso)
       serial.print(calibracao_fator);
@@ -42,7 +42,7 @@ void calibrar_balanca(HX711 balanca,float calibracao_fator){
       do{
        calibracao_fator--;
        balanca.set_scale(calibracao_fator);
-       aux = balanca.get_unit();
+       aux = balanca.get_units();
       }while(aux< peso)
       
       serial.print(calibracao_fator);
