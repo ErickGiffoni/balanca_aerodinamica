@@ -16,7 +16,7 @@ float peso2 = 1.000;
 HX711 balanca_aero;
 HX711 balanca_aero2;
 
-void calibrar_balanca(HX711 balanca,float calibracao_fator);
+void calibrar_balanca(HX711 balanca,float calibracao_fator, float peso);
 
 void setup() {
   Serial.begin(9600);
