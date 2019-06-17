@@ -16,7 +16,7 @@ HX711 balanca_aero2;
 //dados para as funçoes de arrasto e de sustentacao
 double fg = 9.81; // m/s^2 - aceleracao gravitacional
 double corda = 0.08; // m - 8 cm
-double densidade_do_fluido = 1.225; // kg/m^3
+double densidade_do_fluido = 1.225/1.11; // kg/m^3
 double velocidade = 10.0; // m/s
 double velocidade_2 = velocidade*velocidade; // mˆ2/sˆ2 - velocidade ao quadrado
 double massa_da_celula = 0.0; // kg
@@ -53,7 +53,7 @@ void loop() {
   massa1 = balanca_aero.get_units(5);
   massa2 = balanca_aero2.get_units(5);
 
-  Serial.print("Massas aferidas pelas células de carga:\n\n");
+  Serial.print("Massas aferidas pelas células de carga (kg) :\n\n");
   Serial.print("\t\tMassa 1 = ");
   Serial.print(massa1);
   Serial.print("\n");
@@ -76,9 +76,9 @@ void loop() {
 
 }
 double coef_sustentacao(double *massa_da_celula){
-  return ((*massa_da_celula)*(fg)*(0.5)*(densidade_do_fluido)*(velocidade_2)*(corda));
+  return ((*massa_da_celula)/((fg)*(0.5)*(densidade_do_fluido)*(velocidade_2)*(corda)));
 }
 
 double coef_arrasto(double *massa_da_celula){
-  return ((*massa_da_celula)*(0.5)*(densidade_do_fluido)*(velocidade_2)*(corda));
+  return ((*massa_da_celula)/((0.5)*(densidade_do_fluido)*(velocidade_2)*(corda)));
 }
