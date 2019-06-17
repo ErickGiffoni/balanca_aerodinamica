@@ -53,7 +53,7 @@ void loop() {
   massa1 = balanca_aero.get_units(5);
   massa2 = balanca_aero2.get_units(5);
 
-  Serial.print("Massas aferidas pelas células de carga:\n\n");
+  Serial.print("Massas aferidas pelas células de carga (kg) :\n\n");
   Serial.print("\t\tMassa 1 = ");
   Serial.print(massa1);
   Serial.print("\n");
@@ -76,9 +76,9 @@ void loop() {
 
 }
 double coef_sustentacao(double *massa_da_celula){
-  return ((*massa_da_celula)*(fg)*(0.5)*(densidade_do_fluido)*(velocidade_2)*(corda));
+  return ((*massa_da_celula)/((fg)*(0.5)*(densidade_do_fluido)*(velocidade_2)*(corda)));
 }
 
 double coef_arrasto(double *massa_da_celula){
-  return ((*massa_da_celula)*(0.5)*(densidade_do_fluido)*(velocidade_2)*(corda));
+  return ((*massa_da_celula)/((0.5)*(densidade_do_fluido)*(velocidade_2)*(corda)));
 }
