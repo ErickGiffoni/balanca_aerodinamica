@@ -1,6 +1,5 @@
 #include "HX711.h"                    // Biblioteca HX711 
 
-
 //Pinos de dados 
 #define DOUT1 A0    
 #define DOUT2 A4                    
@@ -10,8 +9,8 @@
 HX711 ARRASTO_HX711;   // define instancia balança HX711
 HX711 SUSTENTACAO_HX711;
  
-float fator_de_calibracao_arrasto = 1051100.00;   // fator de calibração para teste inicial
-float fator_de_calibracao_sustentacao = 153000.00; 
+float fator_de_calibracao_arrasto = 6563150.00;   // fator de calibração para teste inicial
+float fator_de_calibracao_sustentacao = 462200.00; 
 
 void setup()
 {
@@ -44,17 +43,17 @@ void loop()
   SUSTENTACAO_HX711.set_scale(fator_de_calibracao_sustentacao);
   
   Serial.print("Arrasto Peso: ");   
-  Serial.print(ARRASTO_HX711.get_units(3),3);
+  Serial.print(ARRASTO_HX711.get_units(25),4);
   Serial.print(" kg");
   Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
   Serial.println(fator_de_calibracao_arrasto);   // imprime fator de calibração
   Serial.print("Sustentação Peso: ");   
-  Serial.print(SUSTENTACAO_HX711.get_units(3),3);
+  Serial.print(SUSTENTACAO_HX711.get_units(25),4);
   Serial.print(" kg");
   Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
   Serial.println(fator_de_calibracao_sustentacao);   // imprime fator de calibração
   Serial.print("\n");
-  delay(2000) ;   // atraso de 0,5 segundo
+  delay(2000) ;   // atraso de 2 segundos
 
  
   if (Serial.available())   // reconhece letra para ajuste do fator de calibração
