@@ -19,8 +19,8 @@ void setup()
   SUSTENTACAO_HX711.begin(DOUT2, CLK2);
   
   Serial.println("\nCalibração");
-  Serial.println("Remova os pesos");
-  Serial.println("Depois que as leituras começarem, coloque um peso conhecido sobre a Balança");
+  Serial.println("Remova as massas");
+  Serial.println("Depois que as leituras começarem, coloque uma massa conhecida sobre a Balança");
   Serial.println("Fator de calibração para o arrasto:");
   Serial.println("Pressione a,s,d,f para aumentar Fator de Calibração por 10,100,1000,10000 respectivamente");
   Serial.println("Pressione z,x,c,v para diminuir Fator de Calibração por 10,100,1000,10000 respectivamente");
@@ -28,7 +28,7 @@ void setup()
   Serial.println("Fator de calibração para a sustentação:");  
   Serial.println("Pressione h,j,k,l para aumentar Fator de Calibração por 10,100,1000,10000 respectivamente");
   Serial.println("Pressione u,i,o,p para diminuir Fator de Calibração por 10,100,1000,10000 respectivamente");
-  Serial.println("Após leitura correta do peso, pressione y para TARA(zerar) ");
+  Serial.println("Após leitura correta das massas, pressione y e/ou tpara TARA(zerar) ");
   delay(3000);
  
   ARRASTO_HX711.set_scale();   // configura a escala da Balança
@@ -53,7 +53,7 @@ void loop()
   Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
   Serial.println(fator_de_calibracao_sustentacao);   // imprime fator de calibração
   Serial.print("\n");
-  delay(2000) ;   // atraso de 0,5 segundo
+  delay(2000) ;   // atraso de 2 segundos
 
  
   if (Serial.available())   // reconhece letra para ajuste do fator de calibração
@@ -83,17 +83,17 @@ void loop()
 //  SUSTENTAÇÃO
    else if ( temp == 'u')   // z = diminui 10
       fator_de_calibracao_sustentacao -= 10;
-   else if (temp == 'j')   // s = aumenta 100
+   else if (temp == 'j')   // j = aumenta 100
       fator_de_calibracao_sustentacao += 100;
-   else if (temp == 'i')   // x = diminui 100
+   else if (temp == 'i')   // i = diminui 100
       fator_de_calibracao_sustentacao -= 100;
-   else if (temp == 'k')   // d = aumenta 1000
+   else if (temp == 'k')   // k = aumenta 1000
       fator_de_calibracao_sustentacao += 1000;
-   else if (temp == 'o')   // c = diminui 1000
+   else if (temp == 'o')   // o = diminui 1000
       fator_de_calibracao_sustentacao -= 1000;
-   else if (temp == 'l')   // f = aumenta 10000
+   else if (temp == 'l')   // l = aumenta 10000
       fator_de_calibracao_sustentacao += 10000;
-   else if (temp == 'p')   // v = dimuni 10000
+   else if (temp == 'p')   // p = dimuni 10000
       fator_de_calibracao_sustentacao -= 10000;
    else if (temp == 'y')
       SUSTENTACAO_HX711.tare();
