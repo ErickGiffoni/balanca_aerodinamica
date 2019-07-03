@@ -9,8 +9,8 @@
 HX711 ARRASTO_HX711;   // define instancia balança HX711
 HX711 SUSTENTACAO_HX711;
  
-float fator_de_calibracao_arrasto = 6563150.00;   // fator de calibração para teste inicial
-float fator_de_calibracao_sustentacao = 462200.00; 
+float fator_de_calibracao_arrasto = 1863150.00;   // fator de calibração para teste inicial
+float fator_de_calibracao_sustentacao = 302200.00; 
 
 void setup()
 {
@@ -26,7 +26,7 @@ void setup()
   Serial.println("Pressione z,x,c,v para diminuir Fator de Calibração por 10,100,1000,10000 respectivamente");
   delay(3000);
   Serial.println("Fator de calibração para a sustentação:");  
-   Serial.println("Pressione h,j,k,l para aumentar Fator de Calibração por 10,100,1000,10000 respectivamente");
+  Serial.println("Pressione h,j,k,l para aumentar Fator de Calibração por 10,100,1000,10000 respectivamente");
   Serial.println("Pressione u,i,o,p para diminuir Fator de Calibração por 10,100,1000,10000 respectivamente");
   Serial.println("Após leitura correta do peso, pressione y para TARA(zerar) ");
   delay(3000);
@@ -42,27 +42,27 @@ void loop()
   ARRASTO_HX711.set_scale(fator_de_calibracao_arrasto);   // ajusta fator de calibração
   SUSTENTACAO_HX711.set_scale(fator_de_calibracao_sustentacao);
   
-  Serial.print("Arrasto Peso: ");   
-  Serial.print(ARRASTO_HX711.get_units(25),4);
+  Serial.print("Arrasto Massa: ");   
+  Serial.print(ARRASTO_HX711.get_units(3),4);
   Serial.print(" kg");
   Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
   Serial.println(fator_de_calibracao_arrasto);   // imprime fator de calibração
-  Serial.print("Sustentação Peso: ");   
-  Serial.print(SUSTENTACAO_HX711.get_units(25),4);
+  Serial.print("Sustentação Massa: ");   
+  Serial.print(SUSTENTACAO_HX711.get_units(3),4);
   Serial.print(" kg");
   Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
   Serial.println(fator_de_calibracao_sustentacao);   // imprime fator de calibração
   Serial.print("\n");
-  delay(2000) ;   // atraso de 2 segundos
+  delay(2000) ;   // atraso de 0,5 segundo
 
  
   if (Serial.available())   // reconhece letra para ajuste do fator de calibração
   {
    char temp = Serial.read();
+   
 //   ARRASTO
    if (temp == '+' || temp == 'a')   // a = aumenta 10
       fator_de_calibracao_arrasto += 10;
-   
    else if (temp == '-' || temp == 'z')   // z = diminui 10
       fator_de_calibracao_arrasto -= 10;
    else if (temp == 's')   // s = aumenta 100
