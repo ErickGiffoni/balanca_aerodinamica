@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Docsie Document</title>
+        <style type="text/css">@media print {
+    #DOCSIE__ROOT * {overflow: visible!important;}
+    #DOCSIE__ROOT .pure-docsie .docsie-nav {width: auto!important;height: auto!important;}
+    #DOCSIE__ROOT .pure-docsie .docsie-nav>ul {height: auto!important;}
+    #DOCSIE__ROOT .pure-docsie{width: auto!important;display:block}
+    #DOCSIE__ROOT .pure-docsie .docsie-doc article {margin-top: 0!important}
+    /* #DOCSIE__ROOT .page-break {page-break-after: always!important} */
+    #DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content figure img {page-break-inside: avoid!important}
+}
+
+#DOCSIE__ROOT {
+    text-rendering: optimizespeed
+}
+
+#DOCSIE__ROOT .pure-docsie {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column
+}
+
+@media screen and (min-width: 568px) {
+    #DOCSIE__ROOT .pure-docsie {
+        flex-direction: row
+    }
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-nav {
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 568px) {
+    #DOCSIE__ROOT .pure-docsie .docsie-nav {
+        width: 30%;
+        margin-left: 0;
+        min-width: 120px
+    }
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-nav ul {
+    list-style: none
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-nav ul a {
+    display: inline-block;
+    margin-bottom: .5em
+}
+
+@media screen and (min-width: 568px) {
+    #DOCSIE__ROOT .pure-docsie .docsie-nav>ul {
+        position: sticky;
+        position: -webkit-sticky;
+        padding-right: 1.5em;
+        overflow-y: auto
+    }
+    #DOCSIE__ROOT .pure-docsie .docsie-nav>ul>li.expanded>ul {
+        max-height: 9999px
+    }
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-nav .version-picker,
+#DOCSIE__ROOT .pure-docsie .docsie-nav .language-picker {
+    display: inline-block;
+    margin: 1em 1em 1em 0
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1
+}
+
+@media screen and (min-width: 568px) {
+    #DOCSIE__ROOT .pure-docsie .docsie-doc {
+        min-width: 400px;
+        box-sizing: border-box
+    }
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc article:not(:first-of-type) {
+    margin-top: 6em;
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-section-anchor {
+    margin-right: -1em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-section-anchor svg {
+    fill: none;
+    width: 1em;
+    height: 1em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content section {
+    margin-left: auto;
+    margin-right: auto
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content figure {
+    text-align: center
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content figure img,
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content figure iframe {
+    max-width: 100%;
+    border-radius: 2px
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content figure figcaption {
+    margin-top: 1em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content code {
+    padding: 0 .5em;
+    font-family: monospace
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content code pre {
+    margin: 0;
+    padding: 0;
+    min-height: 1em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content code.docsie-codeblock {
+    padding: 1em;
+    display: block;
+    max-width: 100%;
+    overflow: auto
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content ol,
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content ul {
+    padding-left: 1.2em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content dt {
+    margin-bottom: .5em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-content dd {
+    margin-bottom: 1.5em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-footer .docsie-footer-nav {
+    display: flex;
+    flex-direction: row
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-footer .docsie-footer-nav svg {
+    width: 1em;
+    height: 1em
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-footer .docsie-footer-nav>div {
+    flex-basis: 50%
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-footer .docsie-footer-nav .docsie-footer-next {
+    text-align: right
+}
+
+#DOCSIE__ROOT .pure-docsie .docsie-doc .docsie-footer .docsie-madewith {
+    text-align: right;
+    display: block;
+    font-size: 80%;
+    opacity: .7
+}
+
+.pure-docsie .docsie-nav-toggle-button {
+    width: 48px;
+    height: 48px;
+    bottom: 1em;
+    right: 1em;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    background: #fff;
+    color: #444
+}
+
+@media screen and (max-width: 568px) {
+    .pure-docsie .docsie-nav {
+        background: #fff
+    }
+}
+
+.pure-docsie .docsie-nav ul {
+    padding-left: 0
+}
+
+.pure-docsie .docsie-nav>ul {
+    top: 1em;
+    max-height: 100vh
+}
+
+.pure-docsie .docsie-nav>ul>li {
+    margin-bottom: 1em
+}
+
+.pure-docsie .docsie-nav>ul>li>button.expand {
+    margin-left: .5em
+}
+
+.pure-docsie .docsie-search .docsie-search-form h3 {
+    display: flex;
+    flex-direction: row
+}
+
+.pure-docsie .docsie-search .docsie-search-form:not(.expanded) {
+    float: right
+}
+
+.pure-docsie .docsie-search .docsie-search-form:not(.expanded) h3 {
+    flex-direction: row-reverse
+}
+
+.pure-docsie .docsie-search .docsie-search-form input {
+    width: 100%
+}
+
+.pure-docsie .docsie-search .docsie-search-result {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee
+}
+
+@media screen and (min-width: 568px) {
+    .pure-docsie .docsie-doc {
+        padding-left: 2em
+    }
+}
+
+.pure-docsie .docsie-doc .docsie-section-anchor {
+    color: #999
+}
+
+.pure-docsie .docsie-doc figure {
+    margin: 1em
+}
+
+.pure-docsie .docsie-footer .docsie-footer-nav {
+    margin: 2em 0
+}
+
+.pure-docsie .docsie-footer .docsie-footer-nav .docsie-footer-previous {
+    padding-right: 1em
+}
+
+.pure-docsie .docsie-footer .docsie-footer-nav .docsie-footer-next {
+    padding-left: 1em
+}
+
+.pure-docsie .docsie-footer .docsie-footer-nav svg {
+    margin: 0 5px;
+    stroke-width: 1pt
+}</style>
+    
+    
+    </head>
+    <body id="DOCSIE__ROOT">
+        <div class="pure-docsie" style="max-width: 80%;">
+            <nav class="docsie-nav page-break">
+        <h2>Table of contents</h2>
+        <ul>
+            <li>
+                <a href="#1.-calibracao.ino">1. calibracao.ino</a>
+                <ul>
+                </ul>
+            </li> <li>
+                <a href="#2.-balanca_aero.ino">2. balanca_aero.ino</a>
+                <ul>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+            <main class="docsie-doc">
+                <article class="page-break">
+              <header id="section-page-header" class="docsie-header">
+              <h1 id="1.-calibracao.ino" class="docsie-title">
+                calibracao.ino
+                <a class="docsie-section-anchor " title="calibracao.ino" href="#1.-calibracao.ino">
+                    <svg class="docsie-icon-link" viewBox="0 0 20 20" width="20" height="20"><path fill="none" stroke="currentColor" d="M10.6 12.4l-3 3c-.8.8-1.7.8-2.4 0l-.7-.6c-.7-.7-.7-1.6 0-2.3l3.1-3.1M9.3 7.4l3.1-3.1c.7-.7 1.6-.7 2.3 0l.7.7c.7.7.7 1.6 0 2.3l-3 3M8 11.9l4-4"></path></svg>
+                </a>
+              </h1>
+              <p class="docsie-subtitle">Esse código é usado para calibrar as duas células de carga a partir de massas conhecidas.</p>
+          </header>
+          <div class="docsie-content">
+            <section class="docsie-section" >
+                <code class="docsie-codeblock">
+        <pre id="code-block-fuvns">#include "HX711.h"                    // Biblioteca HX711 
+
+//Pinos de dados 
+#define DOUT1 A0    
+#define DOUT2 A4                    
+//pinos de clock
+#define CLK1 A1 
+#define CLK2 A5   
+HX711 ARRASTO_HX711;   // define instancia balança HX711
+HX711 SUSTENTACAO_HX711;
+ 
+float fator_de_calibracao_arrasto = 1863150.00;   // fator de calibração para teste inicial
+float fator_de_calibracao_sustentacao = 302200.00; 
+
+void setup()
+{
+  Serial.begin(9600);   // monitor serial 9600 Bps
+  ARRASTO_HX711.begin(DOUT1, CLK1);
+  SUSTENTACAO_HX711.begin(DOUT2, CLK2);
+  
+  Serial.println("\nCalibração");
+  Serial.println("Remova as massas");
+  Serial.println("Depois que as leituras começarem, coloque uma massa conhecida sobre a Balança");
+  Serial.println("Fator de calibração para o arrasto:");
+  Serial.println("Pressione a,s,d,f para aumentar Fator de Calibração por 10,100,1000,10000 respectivamente");
+  Serial.println("Pressione z,x,c,v para diminuir Fator de Calibração por 10,100,1000,10000 respectivamente");
+  delay(3000);
+  Serial.println("Fator de calibração para a sustentação:");  
+  Serial.println("Pressione h,j,k,l para aumentar Fator de Calibração por 10,100,1000,10000 respectivamente");
+  Serial.println("Pressione u,i,o,p para diminuir Fator de Calibração por 10,100,1000,10000 respectivamente");
+  Serial.println("Após leitura correta das massas, pressione y e/ou tpara TARA(zerar) ");
+  delay(3000);
+ 
+  ARRASTO_HX711.set_scale();   // configura a escala da Balança
+  SUSTENTACAO_HX711.set_scale();
+  
+  ARRASTO_HX711.tare();
+  SUSTENTACAO_HX711.tare();
+} 
+void loop()
+{
+  ARRASTO_HX711.set_scale(fator_de_calibracao_arrasto);   // ajusta fator de calibração
+  SUSTENTACAO_HX711.set_scale(fator_de_calibracao_sustentacao);
+  
+  Serial.print("Arrasto Massa: ");   
+  Serial.print(ARRASTO_HX711.get_units(3),4);
+  Serial.print(" kg");
+  Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
+  Serial.println(fator_de_calibracao_arrasto);   // imprime fator de calibração
+  Serial.print("Sustentação Massa: ");   
+  Serial.print(SUSTENTACAO_HX711.get_units(3),4);
+  Serial.print(" kg");
+  Serial.print("\t\tFator de Calibração: ");   // imprime no monitor serial
+  Serial.println(fator_de_calibracao_sustentacao);   // imprime fator de calibração
+  Serial.print("\n");
+  delay(2000) ;   // atraso de 2 segundos
+
+ 
+  if (Serial.available())   // reconhece letra para ajuste do fator de calibração
+  {
+   char temp = Serial.read();
+   
+//   ARRASTO
+   if (temp == '+' || temp == 'a')   // a = aumenta 10
+      fator_de_calibracao_arrasto += 10;
+   else if (temp == '-' || temp == 'z')   // z = diminui 10
+      fator_de_calibracao_arrasto -= 10;
+   else if (temp == 's')   // s = aumenta 100
+      fator_de_calibracao_arrasto += 100;
+   else if (temp == 'x')   // x = diminui 100
+      fator_de_calibracao_arrasto -= 100;
+   else if (temp == 'd')   // d = aumenta 1000
+      fator_de_calibracao_arrasto += 1000;
+   else if (temp == 'c')   // c = diminui 1000
+      fator_de_calibracao_arrasto -= 1000;
+   else if (temp == 'f')   // f = aumenta 10000
+      fator_de_calibracao_arrasto += 10000;
+   else if (temp == 'v')   // v = dimuni 10000
+      fator_de_calibracao_arrasto -= 10000;
+   else if (temp == 't')
+      ARRASTO_HX711.tare();   // t = zera a Balança
+
+//  SUSTENTAÇÃO
+   else if ( temp == 'u')   // z = diminui 10
+      fator_de_calibracao_sustentacao -= 10;
+   else if (temp == 'j')   // j = aumenta 100
+      fator_de_calibracao_sustentacao += 100;
+   else if (temp == 'i')   // i = diminui 100
+      fator_de_calibracao_sustentacao -= 100;
+   else if (temp == 'k')   // k = aumenta 1000
+      fator_de_calibracao_sustentacao += 1000;
+   else if (temp == 'o')   // o = diminui 1000
+      fator_de_calibracao_sustentacao -= 1000;
+   else if (temp == 'l')   // l = aumenta 10000
+      fator_de_calibracao_sustentacao += 10000;
+   else if (temp == 'p')   // p = dimuni 10000
+      fator_de_calibracao_sustentacao -= 10000;
+   else if (temp == 'y')
+      SUSTENTACAO_HX711.tare();
+  }
+}</pre>
+    </code></section>
+          </div>
+          </article> <article class="page-break">
+              <header id="section-page-header" class="docsie-header">
+              <h1 id="2.-balanca_aero.ino" class="docsie-title">
+                balanca_aero.ino
+                <a class="docsie-section-anchor " title="balanca_aero.ino" href="#2.-balanca_aero.ino">
+                    <svg class="docsie-icon-link" viewBox="0 0 20 20" width="20" height="20"><path fill="none" stroke="currentColor" d="M10.6 12.4l-3 3c-.8.8-1.7.8-2.4 0l-.7-.6c-.7-.7-.7-1.6 0-2.3l3.1-3.1M9.3 7.4l3.1-3.1c.7-.7 1.6-.7 2.3 0l.7.7c.7.7.7 1.6 0 2.3l-3 3M8 11.9l4-4"></path></svg>
+                </a>
+              </h1>
+              <p class="docsie-subtitle">Esse é o código principal da solução de software. A partir dele obtém-se as massas medidas pelas células de carga, bem como os valores das forças de arrasto e de sustentação, dentre outros, conforme os objetivos do trabalho.</p>
+          </header>
+          <div class="docsie-content">
+            <section class="docsie-section" >
+                <code class="docsie-codeblock">
+        <pre id="code-block-6nrtc">#include "HX711.h"
+
+//pinos de entrada
+#define pino_entrada1 A0
+#define pino_entrada2 A4
+//pinos de clock
+#define pino_clock1 A1
+#define pino_clock2 A5
+
+float fator_de_calibracao1 = 1863150.00;
+float fator_de_calibracao2 = 390200.00;
+
+HX711 balanca_aero_arrasto;
+HX711 balanca_aero_sustentacao;
+
+//dados para as funçoes de arrasto e de sustentacao
+double fg = 9.81; // m/s^2 - aceleracao gravitacional
+double corda = 0.079; // m - 8 cm
+double densidade_do_fluido = 1.225/1.11; // kg/m^3
+float velocidade = 11.15; // m/s
+double velocidade_2 = velocidade*velocidade; // mˆ2/sˆ2 - velocidade ao quadrad
+float envergadura = 0.145;
+float massa1 = 0.0, massa2 = 0.0;
+
+
+void setup() {
+  Serial.begin(9600);
+
+  balanca_aero_arrasto.begin(pino_entrada1, pino_clock1);
+  balanca_aero_sustentacao.begin(pino_entrada2, pino_clock2);
+
+  Serial.print("\t\tProjeto Integrador de Engenharia 1\n");
+  Serial.print("\t\tUniversidade de Brasília - Faculdade do Gama\n\n");
+  Serial.print("\t\t\t\tBALANÇA AERODINÂMICA\n\n\n");
+  balanca_aero_arrasto.set_scale();
+  balanca_aero_sustentacao.set_scale();
+  
+  //define o fator de calibracao
+  balanca_aero_arrasto.tare();
+  balanca_aero_sustentacao.tare();
+}
+
+void loop() {
+  //zera a balanca
+  balanca_aero_arrasto.set_scale(fator_de_calibracao1);
+  balanca_aero_sustentacao.set_scale(fator_de_calibracao2);
+
+  //get_units realizara a media dos 15 valores de  massas medidas
+  massa1 = balanca_aero_arrasto.get_units(15);
+  massa2 = balanca_aero_sustentacao.get_units(15);
+  massa1 = abs(massa1);
+  massa2 = abs(massa2);
+
+  Serial.print("Massas aferidas pelas células de carga (kg) :\n\n");
+  Serial.print("\t\tMassa 1(ARRASTO) = ");
+  Serial.print(massa1,4);
+  Serial.print("\t Força= ");
+  Serial.println(massa1*fg,4);
+  Serial.print("\t\tMassa 2(SUSTENTAÇÃO)= ");
+  Serial.print(massa2,4);
+  Serial.print("\t Força= ");
+  Serial.print(massa2*fg,4);
+  Serial.print("\n\n");
+  
+  //chamada das funcoes
+  double sustentacao, arrasto ;
+  sustentacao = coef_sustentacao(massa2);
+  arrasto = coef_arrasto(massa1);
+  
+  //imprime os coeficientes
+  Serial.print("Coeficientes calculados:\n\n");
+  Serial.print("\t\tCoeficiente de arrasto: ");
+  Serial.println(arrasto,4);
+  Serial.print("\n\t\tCoeficiente de sustentação: ");
+  Serial.println(sustentacao,4);
+ //Atraso de 5,5 segundos
+  delay(5500);
+  Serial.print("------------------------------//------------------------------\n\n");
+}
+
+double coef_sustentacao(double massa_da_celula){
+  return ((massa2*fg)/((0.5)*(densidade_do_fluido)*(velocidade_2)*(corda)*(envergadura)));
+}
+
+double coef_arrasto(double massa_da_celula){
+  return ((massa1*fg)/((0.5)*(densidade_do_fluido)*(velocidade_2)*(corda)*(envergadura)));
+}</pre>
+    </code></section>
+          </div>
+          </article>
+                <footer class="docsie-footer">
+                    <p><a href="#">Back to top</a></p>
+                    <p class="docsie-madewith"><small>Made with <a href="https://docsie.io">Docsie.io</a></small></p>
+                </footer>
+            </main>
+        </div>
+    </body>
+    </html>
